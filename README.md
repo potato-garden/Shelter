@@ -8,8 +8,8 @@
 5. Giry Retno Indra Pangestu 		    (c0050534)
 6. Leonardus Bagas Sigit Widiatmo 	(a0050508)
 
-## Theme
-## Shelter
+## Theme : Healthcare
+## Title of Project : Shelter
 
 ### Summary of Project
 Many people don't want to share their problems and choose to shut themselves because of some reasons (trust issues, shame, etc). Our project  purpose is to make a way to share a user's problem without worrying about the user's privacy and match with the user's personality. According to WHO’s data, every 40 seconds, one person dies by committing suicide[1],  where suicide occurs because of a mental health disorder. That’s why we want to help people strengthen each other so they don’t give up on their lives.
