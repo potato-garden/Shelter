@@ -71,7 +71,7 @@ Many people don't want to share their problems and choose to shut themselves bec
 - Connect two users from machine learning search results via socket programming
 
 ### Dataset:
-- Big Five Personality Test(https://www.kaggle.com/tunguz/big-five-personality-test)
+- [Big Five Personality Test](https://www.kaggle.com/tunguz/big-five-personality-test)
 
 ### Paper / Journals / articles:
-- The Design Method of Network Chat System Based on Socket and Cloud Computing(https://ieeexplore.ieee.org/document/6394395)
+- [The Design Method of Network Chat System Based on Socket and Cloud Computing](https://ieeexplore.ieee.org/document/6394395)
