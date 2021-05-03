@@ -1,12 +1,12 @@
 # Bangkit Team B21-CAP0189
 
 # Member
-1. Soni Marko Nathanniel Tannady	  (c2442286)
-2. Tony Wijaya 				              (a1221569)
-3. Widya Arditanti 			            (m2442280)
-4. Nurlaily Rahmatika 			        (m2582419)
-5. Giry Retno Indra Pangestu 		    (c0050534)
-6. Leonardus Bagas Sigit Widiatmo 	(a0050508)
+1. Soni Marko Nathanniel Tannady	  (c2442286) Email : c2442286@bangkit.academy
+2. Tony Wijaya 				              (a1221569) Email : a1221569@bangkit.academy
+3. Widya Arditanti 			            (m2442280) Email : m2442280@bangkit.academy
+4. Nurlaily Rahmatika 			        (m2582419) Email : m2582419@bangkit.academy
+5. Giry Retno Indra Pangestu 		    (c0050534) Email : c0050534@bangkit.academy
+6. Leonardus Bagas Sigit Widiatmo 	(a0050508) Email : a0050508@bangkit.academy
 
 ## Theme : Healthcare
 ## Title of Project : Shelter
