@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "866096521291",
+    "project_id": "potato-garden",
+    "storage_bucket": "potato-garden.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866096521291:android:54de0f54a9c93f79cbadce",
+        "android_client_info": {
+          "package_name": "com.bangkit.shelter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866096521291-bjfb0v9ufiujobrcdvjvo588sr6pgt36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUU21RfgFMqHfjoLpa1DJYNZu2JChAJbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866096521291-bjfb0v9ufiujobrcdvjvo588sr6pgt36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
