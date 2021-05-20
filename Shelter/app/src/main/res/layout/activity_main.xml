@@ -4,15 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.auth.LoginActivity">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/app_name"
+        android:textSize="96sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtv_content"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
+        android:maxLines="3"
+        android:text="@string/header"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtv_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signingoogle"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="@string/sign_in_with_google"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/icon_google"
+        app:layout_constraintEnd_toEndOf="@+id/mtv_content"
+        app:layout_constraintStart_toStartOf="@+id/mtv_content"
+        app:layout_constraintTop_toBottomOf="@+id/mtv_content" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_signingoogle"
+        app:layout_constraintStart_toStartOf="@+id/btn_signingoogle"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signingoogle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signin"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="@string/signup"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

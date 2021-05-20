@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "866096521291",
+    "firebase_url": "https://potato-garden-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "potato-garden",
     "storage_bucket": "potato-garden.appspot.com"
   },
@@ -14,13 +15,21 @@
       },
       "oauth_client": [
         {
+          "client_id": "866096521291-ltpsfs1sc3jocvvr34k7tpm3amc1bgtp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bangkit.shelter",
+            "certificate_hash": "a64c1d25ba0160bef6c01e89e50a8cfdebf095cc"
+          }
+        },
+        {
           "client_id": "866096521291-bjfb0v9ufiujobrcdvjvo588sr6pgt36.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCUU21RfgFMqHfjoLpa1DJYNZu2JChAJbI"
+          "current_key": "AIzaSyCDeT8ODUPJoJn0B8UxwnyvNF05m95Gg2o"
         }
       ],
       "services": {
