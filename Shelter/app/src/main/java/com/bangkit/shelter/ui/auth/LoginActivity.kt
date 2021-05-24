@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.bangkit.shelter.ResetPasswordActivity
 import com.bangkit.shelter.databinding.ActivityLoginBinding
 import com.bangkit.shelter.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth

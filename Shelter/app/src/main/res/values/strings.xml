@@ -9,6 +9,7 @@
     <string name="header">Find your Shelter to share your problem and get solution</string>
     <string name="done">Done</string>
     <string name="username">Username</string>
+    <string name="next">Next</string>
 
 
     <string-array name="question_EXT">
