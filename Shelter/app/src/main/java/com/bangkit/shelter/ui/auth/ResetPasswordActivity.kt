@@ -19,9 +19,8 @@ class ResetPasswordActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         with(activityResetPasswordBinding) {
-            val email = medEmail.text.toString().trim()
-
             btnResetPassword.setOnClickListener {
+                val email = medEmail.text.toString().trim()
                 Log.d("test", email)
                 if(email != null){
                     auth.sendPasswordResetEmail(email).addOnCompleteListener{ task ->

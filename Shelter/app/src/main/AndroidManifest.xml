@@ -14,13 +14,10 @@
         android:theme="@style/Theme.Shelter"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".ui.onboarding.QuestionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".ui.home.ui.HomeActivity"
+            android:label="@string/title_activity_dashboard"></activity>
+        <activity android:name=".ui.onboarding.QuestionActivity"></activity>
         <activity
             android:name=".ui.auth.ResetPasswordActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
@@ -32,7 +29,11 @@
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ui.auth.MainActivity"

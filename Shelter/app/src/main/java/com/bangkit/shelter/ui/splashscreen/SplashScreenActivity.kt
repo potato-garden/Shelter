@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.shelter.databinding.ActivitySplashScreenBinding
-import com.bangkit.shelter.ui.auth.LoginActivity
+import com.bangkit.shelter.ui.home.ui.HomeActivity
 import com.bangkit.shelter.ui.auth.MainActivity
-import com.bangkit.shelter.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SplashScreenActivity : AppCompatActivity() {

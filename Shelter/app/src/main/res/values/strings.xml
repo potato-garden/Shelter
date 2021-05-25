@@ -24,4 +24,6 @@
         <item>I don\'t mind being the center of attention.</item>
         <item>I am quiet around strangers.</item>
     </string-array>
+    <string name="title_activity_dashboard">MainActivity</string>
+    <string name="title_home">Home</string>
 </resources>
