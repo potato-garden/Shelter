@@ -1,40 +1,42 @@
 package com.bangkit.shelter.ui.auth
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import com.bangkit.shelter.R
 import com.bangkit.shelter.databinding.ActivityResetPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class ResetPasswordActivity : AppCompatActivity() {
-    private lateinit var activityResetPasswordBinding: ActivityResetPasswordBinding
+    private lateinit var binding: ActivityResetPasswordBinding
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activityResetPasswordBinding = ActivityResetPasswordBinding.inflate(layoutInflater)
-        setContentView(activityResetPasswordBinding.root)
+        binding = ActivityResetPasswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
-        with(activityResetPasswordBinding) {
+        with(binding) {
             btnResetPassword.setOnClickListener {
                 val email = medEmail.text.toString().trim()
-                Log.d("test", email)
+                android.util.Log.d("test", email)
                 if(email != null){
                     auth.sendPasswordResetEmail(email).addOnCompleteListener{ task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(
+                            android.widget.Toast.makeText(
                                 this@ResetPasswordActivity,
                                 "Check your email to reset your password",
-                                Toast.LENGTH_SHORT
+                                android.widget.Toast.LENGTH_SHORT
                             ).show()
                         }else{
-                            Toast.makeText(
+                            android.widget.Toast.makeText(
                                 this@ResetPasswordActivity,
                                 "Failed to Reset Password",
-                                Toast.LENGTH_SHORT
+                                android.widget.Toast.LENGTH_SHORT
                             ).show()
                         }
                     }
@@ -42,9 +44,8 @@ class ResetPasswordActivity : AppCompatActivity() {
 
             }
             btnBack.setOnClickListener{
-                startActivity(Intent(this@ResetPasswordActivity, LoginActivity::class.java))
+                startActivity(Intent(this@ResetPasswordActivity, com.bangkit.shelter.ui.auth.LoginActivity::class.java))
             }
         }
-
     }
 }

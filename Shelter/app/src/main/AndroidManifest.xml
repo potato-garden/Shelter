@@ -4,6 +4,8 @@
     package="com.bangkit.shelter">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -14,21 +16,15 @@
         android:theme="@style/Theme.Shelter"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity
-            android:name=".ui.home.ui.HomeActivity"
-            android:label="@string/title_activity_dashboard"></activity>
-        <activity android:name=".ui.onboarding.QuestionActivity"></activity>
-        <activity
-            android:name=".ui.auth.ResetPasswordActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-        <activity android:name=".ui.call.CallActivity" />
-        <activity android:name=".ui.chat.ChatActivity" />
-        <activity android:name=".ui.setting.SettingActivity" />
+        <activity android:name=".ui.rating.AddCommentActivity"></activity>
         <activity android:name=".ui.rating.RatingActivity" />
-        <activity android:name=".ui.profile.ProfileActivity" />
-        <activity
-            android:name=".ui.splashscreen.SplashScreenActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <activity android:name=".ui.onboarding.QuestionActivity" />
+        <activity android:name=".ui.chat.ChatActivity" />
+        <activity android:name=".ui.auth.MainAuthActivity" />
+        <activity android:name=".ui.auth.ResetPasswordActivity" />
+        <activity android:name=".ui.auth.RegisterActivity" />
+        <activity android:name=".ui.auth.LoginActivity" />
+        <activity android:name=".ui.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,15 +32,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.auth.MainActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-        <activity
-            android:name=".ui.auth.SignUpActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-        <activity
-            android:name=".ui.auth.LoginActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-        <activity android:name=".ui.home.HomeActivity" />
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
