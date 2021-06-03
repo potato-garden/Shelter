@@ -30,9 +30,9 @@ Many people don't want to share their problems and choose to shut themselves bec
 #### Android
 - Make a design mockup application
 - Implementation Feature in android application
-- Connect the API from Google Cloud using room
-- Create repository to connect local data and external data
-- Do unit testing and instrumental testing for android application
+- Connect Data To Firebase Console
+- Using Firebase storage, realtime database and firestore to link a google Cloud 
+- Connect the model using TFLite
 
 #### Cloud
 - Set admin and user permissions
