@@ -6,7 +6,6 @@
 3. Widya Arditanti 			            (m2442280) Email : m2442280@bangkit.academy
 4. Nurlaily Rahmatika 			        (m2582419) Email : m2582419@bangkit.academy
 5. Giry Retno Indra Pangestu 		    (c0050534) Email : c0050534@bangkit.academy
-6. Leonardus Bagas Sigit Widiatmo 	(a0050508) Email : a0050508@bangkit.academy
 
 ## Theme : Healthcare
 ## Title of Project : Shelter
