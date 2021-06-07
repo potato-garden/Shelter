@@ -20,12 +20,12 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/mtv_welcome"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-black"
-        android:text="Welcome\nBack"
+        android:text="@string/login_title"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-black"
         android:padding="10dp"
-        android:text="Forgot Password"
+        android:text="@string/forgot_password"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/btn_login"

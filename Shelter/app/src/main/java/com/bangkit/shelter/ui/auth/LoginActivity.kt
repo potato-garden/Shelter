@@ -6,43 +6,38 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bangkit.shelter.MainActivity
 import com.bangkit.shelter.databinding.ActivityLoginBinding
-import com.bangkit.shelter.ui.home.ui.HomeActivity
 import com.bangkit.shelter.ui.onboarding.QuestionActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var activityLoginBinding: ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
     private lateinit var auth: FirebaseAuth
 
     companion object {
-        private val TAG = SignUpActivity::class.java.simpleName
+        private val TAG = LoginActivity::class.java.simpleName
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activityLoginBinding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(activityLoginBinding.root)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        supportActionBar?.hide()
 
-        with(activityLoginBinding) {
+        with(binding) {
             btnBack.setOnClickListener {
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                onBackPressed()
+            }
+            btnForgotPassword.setOnClickListener {
+                startActivity(Intent(this@LoginActivity, ResetPasswordActivity::class.java))
             }
             btnLogin.setOnClickListener {
                 val email = medEmail.text.toString()
                 val password = medPassword.text.toString()
-                if (onBoardingFinished()) {
-                    signIn(email, password)
-                } else {
-                    val intent = Intent(this@LoginActivity, QuestionActivity::class.java)
-                    startActivity(intent)
-                }
-
-            }
-            btnForgotPassword.setOnClickListener {
-                startActivity(Intent(this@LoginActivity, ResetPasswordActivity::class.java))
+                signIn(email, password)
             }
         }
     }
@@ -57,9 +52,15 @@ class LoginActivity : AppCompatActivity() {
                     Log.d(TAG, "signInWithEmail:success")
                     val user = auth.currentUser
                     if (user?.isEmailVerified == true) {
-                        val intent = Intent(this, HomeActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                        if (onBoardingFinished()) {
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            val intent = Intent(this@LoginActivity, QuestionActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
                     } else {
                         user?.sendEmailVerification()
                         Toast.makeText(
@@ -76,7 +77,6 @@ class LoginActivity : AppCompatActivity() {
                         baseContext, "Authentication failed.",
                         Toast.LENGTH_SHORT
                     ).show()
-                    Toast.makeText(this, "Sry Failed", Toast.LENGTH_SHORT).show()
                 }
             }
         // [END sign_in_with_email]
@@ -86,5 +86,4 @@ class LoginActivity : AppCompatActivity() {
         val sharedPref = this.getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished", false)
     }
-
 }
