@@ -1,11 +1,8 @@
 package com.bangkit.shelter.ui.auth
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import com.bangkit.shelter.R
+import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.shelter.databinding.ActivityResetPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -24,15 +21,15 @@ class ResetPasswordActivity : AppCompatActivity() {
             btnResetPassword.setOnClickListener {
                 val email = medEmail.text.toString().trim()
                 android.util.Log.d("test", email)
-                if(email != null){
-                    auth.sendPasswordResetEmail(email).addOnCompleteListener{ task ->
+                if (email != null) {
+                    auth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             android.widget.Toast.makeText(
                                 this@ResetPasswordActivity,
                                 "Check your email to reset your password",
                                 android.widget.Toast.LENGTH_SHORT
                             ).show()
-                        }else{
+                        } else {
                             android.widget.Toast.makeText(
                                 this@ResetPasswordActivity,
                                 "Failed to Reset Password",
@@ -43,8 +40,13 @@ class ResetPasswordActivity : AppCompatActivity() {
                 }
 
             }
-            btnBack.setOnClickListener{
-                startActivity(Intent(this@ResetPasswordActivity, com.bangkit.shelter.ui.auth.LoginActivity::class.java))
+            btnBack.setOnClickListener {
+                startActivity(
+                    Intent(
+                        this@ResetPasswordActivity,
+                        com.bangkit.shelter.ui.auth.LoginActivity::class.java
+                    )
+                )
             }
         }
     }

@@ -8,21 +8,17 @@ import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.bangkit.shelter.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
     private var _binding: FragmentSettingBinding? = null
     private val binding get() = _binding!!
-    private lateinit var notificationsViewModel: SettingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(SettingViewModel::class.java)
         _binding = FragmentSettingBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -39,11 +35,11 @@ class SettingFragment : Fragment() {
         val editor = sharedPref?.edit()
         editor?.putBoolean("Finished", true)
         editor?.apply()
-        val booleanValue: Boolean = sharedPref!!.getBoolean("night_mode", true)
+        val booleanValue: Boolean = sharedPref!!.getBoolean("night_mode", false)
         if (booleanValue) {
             binding.switchCompat.text = "Dark Mode"
             binding.switchCompat.isChecked = true
-        }else{
+        } else {
             binding.switchCompat.text = "Light Mode"
             binding.switchCompat.isChecked = false
         }

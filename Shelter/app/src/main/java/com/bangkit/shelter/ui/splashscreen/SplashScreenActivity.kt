@@ -48,7 +48,7 @@ class SplashScreenActivity : AppCompatActivity() {
             }
 
         val sharedPref = applicationContext?.getSharedPreferences("night", Context.MODE_PRIVATE)
-        val booleanValue: Boolean = sharedPref!!.getBoolean("night_mode", true)
+        val booleanValue: Boolean = sharedPref!!.getBoolean("night_mode", false)
         if (booleanValue) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else {

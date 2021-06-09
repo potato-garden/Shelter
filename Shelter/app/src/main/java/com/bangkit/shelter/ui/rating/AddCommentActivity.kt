@@ -11,6 +11,7 @@ class AddCommentActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddCommentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         binding = ActivityAddCommentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

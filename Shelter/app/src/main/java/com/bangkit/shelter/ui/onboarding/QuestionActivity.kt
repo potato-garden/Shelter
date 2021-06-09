@@ -1,6 +1,8 @@
 package com.bangkit.shelter.ui.onboarding
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +14,7 @@ import com.bangkit.shelter.R
 import com.bangkit.shelter.data.entity.User
 import com.bangkit.shelter.databinding.ActivityQuestionBinding
 import com.bangkit.shelter.ml.PersonalityCheck
+import com.bangkit.shelter.ui.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
@@ -26,10 +29,27 @@ class QuestionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuestionBinding
     private lateinit var firebaseUser: FirebaseUser
 
+    val positiveButtonClick = { dialog: DialogInterface, which: Int ->
+        Toast.makeText(applicationContext,
+        "Here we go", Toast.LENGTH_SHORT).show()
+    }
+    val negativeButtonClick = { dialog: DialogInterface, which: Int ->
+        var intent = Intent(applicationContext, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AlertDialog.Builder(this)
+            .setTitle("Warning")
+            .setMessage("Before you use this app i hope you can answer some question we give\nAre You Ready?")
+            .setPositiveButton("Yes I do", DialogInterface.OnClickListener(function = positiveButtonClick))
+            .setNegativeButton("Not yet", DialogInterface.OnClickListener(negativeButtonClick))
+            .show()
+
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
         val db = Firebase.firestore
@@ -75,7 +95,6 @@ class QuestionActivity : AppCompatActivity() {
                     }
 
                     val output_personality = run_model(byteBuffer)
-                    Log.d("test", output_personality.toString())
                     databaseReference.addValueEventListener(object : ValueEventListener {
                         override fun onCancelled(error: DatabaseError) {
                             Toast.makeText(this@QuestionActivity, error.message, Toast.LENGTH_SHORT)
@@ -91,10 +110,15 @@ class QuestionActivity : AppCompatActivity() {
                                         "email" to user.email,
                                         "username" to user.username,
                                         "profile_picture" to "",
-                                        "personality" to output_personality,
-                                        "question" to arrayList
+                                        "personality" to output_personality
                                     )
-                                    Log.d("hash", user_hash.toString())
+                                    databaseReference.child(user.userId).setValue(user_hash)
+                                        .addOnSuccessListener {
+                                            Log.d("Firebase Load","Success")
+                                        }
+                                        .addOnFailureListener{
+                                            Log.d("Firebase Load","Fail")
+                                        }
 
                                     db.collection("User")
                                         .document(user.userId)
