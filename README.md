@@ -1,3 +1,5 @@
+[![potato-garden](https://circleci.com/gh/potato-garden/Shelter.svg?style=shield)](https://circleci.com/gh/potato-garden/Shelter)
+
 # Bangkit Team B21-CAP0189
 
 # Member
@@ -12,6 +14,23 @@
 
 ### Summary of Project
 Many people don't want to share their problems and choose to shut themselves because of some reasons (trust issues, shame, etc). Our project  purpose is to make a way to share a user's problem without worrying about the user's privacy and match with the user's personality. According to WHO’s data, every 40 seconds, one person dies by committing suicide[1](https://news.detik.com/berita/d-4391681/tingkat-bunuh-diri-indonesia-dibanding-negara-negara-lain),  where suicide occurs because of a mental health disorder. That’s why we want to help people strengthen each other so they don’t give up on their lives.
+
+## Screenshots of the Apps
+<p float="left">
+  <img src="background_shelter0.png" width="200" height="400"/>
+  <img src="background_shelter1.png" width="200" height="400"/>
+</p>
+
+## Instructions to use the App
+1. Download Apk by Clicking this [APK](https://40-362776836-gh.circle-artifacts.com/0/artifact-file/app-debug.apk)
+2. Download the APK to you android phone
+3. Go to Register side and fill all sections from name, email, password and confirm password.
+4. Make sure your passsword with length of 6
+5. Then fill the login section with data from registration
+6. Before login check you email verification first 
+7. Then fill the questionnaire with selecting the rating bar
+8. Wait until you enter the home feature
+9. You ready to use the apps
 
 ## Project Scope & Deliverables :
 
@@ -34,46 +53,40 @@ Many people don't want to share their problems and choose to shut themselves bec
 - Connect the model using TFLite
 
 #### Cloud
-- Set admin and user permissions
-- Process and save user data (including personality test results) into a database
-- Send user requests to and from the app system
-- Connect two users from machine learning search results via socket programming
+- Manage GCP Firestore, APIs, and Credentials
+- Manage and Configure Data Storage using Firebase
+- Deploy Machine Learning models using Firebase ML
+- Creating a simple dashboard for monitoring the consumers quota in GCP
+
 
 #### Machine Learning
-- Data pre-processing
-- Analyzing users personality and matching with their chat friend based on their personality
-- Customize user data based on the feedback given at the end of each session 
-- Improve the model
+- Pre-process the dataset by filling in missing values, defining outliers and dropping the unnecessary columns.
+- Differentiate the data using clustering based on 5 types of personality.
+- Change the label data structure to one hot encoding.
+- Build personality test model using neural networks
+- Export the keras model into Tensorflow Lite model.
+
 
 ## Project Resources
 
 ### Budget
 - Google Cloud Platform Subscription : **$200**
 
-### Roles/personnel:
+### Roles:
 
-#### All members:
-- Tasks in “all” scope
-##### Soni Marko Nathanniel Tannady:
-- Set admin and user permissions
-- Process and save user data (including personality test results) into a database
+##### Soni Marko Nathanniel Tannady & Giry Retno Indra Pangestu:
+- Cloud Developer Team
 ##### Tony Wijaya:
 - Android Developer Team
-##### Widya Arditanti:
-- Data pre-processing
-- Analyzing users personality and matching with their chat friend based on their personality
-##### Nurlaily Rahmatika:
-- Customize user data based on the feedback given at the end of each session
-- Improve the model
-##### Giry Retno Indra Pangestu:
-- Send user requests to and from the app system.
-- Connect two users from machine learning search results via socket programming
+##### Widya Arditanti & Nurlaily Rahmatika:
+- Machine Learning Developer Team
 
 ### Dataset:
 - [Big Five Personality Test](https://www.kaggle.com/tunguz/big-five-personality-test)
 
 ### Paper / Journals / articles:
-- [The Design Method of Network Chat System Based on Socket and Cloud Computing](https://ieeexplore.ieee.org/document/6394395)
+- [Big Five Personality](https://openpsychometrics.org/printable/big-five-personality-test.pdf)
+- [Predicting Big Five](https://www.researchgate.net/publication/262164553_Predicting_Big_Five_Personality_Traits_of_Microblog_Users)
 
 ### Design Apps :
 - [Design](https://www.figma.com/file/y37fzinTCpDlRr8phg5EE9/Shelter-Apps?node-id=1%3A4)
