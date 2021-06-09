@@ -21,7 +21,7 @@ Many people don't want to share their problems and choose to shut themselves bec
   <img src="background_shelter1.png" width="200" height="400"/>
 </p>
 
-## Instructions to use the Apss
+## Instructions to use the App
 1. Download Apk by Clicking this [APK](https://40-362776836-gh.circle-artifacts.com/0/artifact-file/app-debug.apk)
 2. Download the APK to you android phone
 3. Go to Register side and fill all sections from name, email, password and confirm password.
