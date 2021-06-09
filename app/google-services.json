@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "767641395852",
+    "firebase_url": "https://potato-garden-capstone-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "potato-garden-capstone",
+    "storage_bucket": "potato-garden-capstone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767641395852:android:8166528aa826dffbca51a9",
+        "android_client_info": {
+          "package_name": "com.bangkit.shelter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767641395852-oneah3grof0iup1425pckujseii4bd7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bangkit.shelter",
+            "certificate_hash": "a64c1d25ba0160bef6c01e89e50a8cfdebf095cc"
+          }
+        },
+        {
+          "client_id": "767641395852-3ebtqpjakg75q4fj70jfse0kjja5fqed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6cYiQNPEnQSe4d8MPS8WLv0Ldo4jjfA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767641395852-3ebtqpjakg75q4fj70jfse0kjja5fqed.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
