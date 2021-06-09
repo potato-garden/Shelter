@@ -6,7 +6,6 @@
 3. Widya Arditanti 			            (m2442280) Email : m2442280@bangkit.academy
 4. Nurlaily Rahmatika 			        (m2582419) Email : m2582419@bangkit.academy
 5. Giry Retno Indra Pangestu 		    (c0050534) Email : c0050534@bangkit.academy
-6. Leonardus Bagas Sigit Widiatmo 	(a0050508) Email : a0050508@bangkit.academy
 
 ## Theme : Healthcare
 ## Title of Project : Shelter
@@ -30,9 +29,9 @@ Many people don't want to share their problems and choose to shut themselves bec
 #### Android
 - Make a design mockup application
 - Implementation Feature in android application
-- Connect the API from Google Cloud using room
-- Create repository to connect local data and external data
-- Do unit testing and instrumental testing for android application
+- Connect Data To Firebase Console
+- Using Firebase storage, realtime database and firestore to link a google Cloud 
+- Connect the model using TFLite
 
 #### Cloud
 - Set admin and user permissions
