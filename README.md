@@ -30,7 +30,7 @@ Many people don't want to share their problems and choose to shut themselves bec
 6. Before login check you email verification first 
 7. Then fill the questionnaire with selecting the rating bar
 8. Wait until you enter the home feature
-9. You ready to use the apps
+9. Your apps is ready to use
 
 ## Project Scope & Deliverables :
 
