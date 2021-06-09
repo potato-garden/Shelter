@@ -22,6 +22,15 @@ Many people don't want to share their problems and choose to shut themselves bec
 </p>
 
 ## Instructions to use the Apss
+1. Download Apk by Clicking this [APK](https://40-362776836-gh.circle-artifacts.com/0/artifact-file/app-debug.apk)
+2. Download the APK to you android phone
+3. Go to Register side and fill all sections from name, email, password and confirm password.
+4. Make sure your passsword with length of 6
+5. Then fill the login section with data from registration
+6. Before login check you email verification first 
+7. Then fill the questionnaire with selecting the rating bar
+8. Wait until you enter the home feature
+9. You ready to use the apps
 
 ## Project Scope & Deliverables :
 
@@ -44,45 +53,40 @@ Many people don't want to share their problems and choose to shut themselves bec
 - Connect the model using TFLite
 
 #### Cloud
-- Set admin and user permissions
-- Process and save user data (including personality test results) into a database
-- Send user requests to and from the app system
+- Manage GCP Firestore, APIs, and Credentials
+- Manage and Configure Data Storage using Firebase
+- Deploy Machine Learning models using Firebase ML
+- Creating a simple dashboard for monitoring the consumers quota in GCP
+
 
 #### Machine Learning
-- Data pre-processing
-- Analyzing users personality and matching with their chat friend based on their personality
-- Customize user data based on the feedback given at the end of each session 
-- Improve the model
+- Pre-process the dataset by filling in missing values, defining outliers and dropping the unnecessary columns.
+- Differentiate the data using clustering based on 5 types of personality.
+- Change the label data structure to one hot encoding.
+- Build personality test model using neural networks
+- Export the keras model into Tensorflow Lite model.
+
 
 ## Project Resources
 
 ### Budget
 - Google Cloud Platform Subscription : **$200**
 
-### Roles/personnel:
+### Roles:
 
-#### All members:
-- Tasks in “all” scope
-##### Soni Marko Nathanniel Tannady:
-- Set admin and user permissions
-- Process and save user data (including personality test results) into a database
+##### Soni Marko Nathanniel Tannady & Giry Retno Indra Pangestu:
+- Cloud Developer Team
 ##### Tony Wijaya:
 - Android Developer Team
-##### Widya Arditanti:
-- Data pre-processing
-- Analyzing users personality and matching with their chat friend based on their personality
-##### Nurlaily Rahmatika:
-- Customize user data based on the feedback given at the end of each session
-- Improve the model
-##### Giry Retno Indra Pangestu:
-- Send user requests to and from the app system.
-- Connect two users from machine learning search results via socket programming
+##### Widya Arditanti & Nurlaily Rahmatika:
+- Machine Learning Developer Team
 
 ### Dataset:
 - [Big Five Personality Test](https://www.kaggle.com/tunguz/big-five-personality-test)
 
 ### Paper / Journals / articles:
-- [The Design Method of Network Chat System Based on Socket and Cloud Computing](https://ieeexplore.ieee.org/document/6394395)
+- [Big Five Personality](https://openpsychometrics.org/printable/big-five-personality-test.pdf)
+- [Predicting Big Five](https://www.researchgate.net/publication/262164553_Predicting_Big_Five_Personality_Traits_of_Microblog_Users)
 
 ### Design Apps :
 - [Design](https://www.figma.com/file/y37fzinTCpDlRr8phg5EE9/Shelter-Apps?node-id=1%3A4)
