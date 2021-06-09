@@ -38,6 +38,9 @@ android {
     aaptOptions {
         noCompress "tflite"  // Your model's file extension: "tflite", "lite", etc.
     }
+    lintOptions {
+        abortOnError false
+    }
 
 }
 
