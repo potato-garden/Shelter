@@ -13,6 +13,10 @@
 ### Summary of Project
 Many people don't want to share their problems and choose to shut themselves because of some reasons (trust issues, shame, etc). Our project  purpose is to make a way to share a user's problem without worrying about the user's privacy and match with the user's personality. According to WHO’s data, every 40 seconds, one person dies by committing suicide[1](https://news.detik.com/berita/d-4391681/tingkat-bunuh-diri-indonesia-dibanding-negara-negara-lain),  where suicide occurs because of a mental health disorder. That’s why we want to help people strengthen each other so they don’t give up on their lives.
 
+## Screenshots of the Apps
+
+## Instructions to use the Apss
+
 ## Project Scope & Deliverables :
 
 #### All:
@@ -37,7 +41,6 @@ Many people don't want to share their problems and choose to shut themselves bec
 - Set admin and user permissions
 - Process and save user data (including personality test results) into a database
 - Send user requests to and from the app system
-- Connect two users from machine learning search results via socket programming
 
 #### Machine Learning
 - Data pre-processing
