@@ -12,7 +12,7 @@ jobs:
           key: android-orb-v1-
       - run:
           name: Chmod permissions
-          command: sudo chmod +x ./Shelter/gradlew
+          command: sudo chmod +x ./gradlew
       - run:
           name: Download Dependencies
           command: ./Shelter/gradlew androidDependencies
@@ -23,13 +23,13 @@ jobs:
             - ~/.android/cache
       - run:
           name: Run Build
-          command: ./Shelter/gradlew build
+          command: ./gradlew build
       - store_artifacts: 
           path: app/build/reports
           destination: reports
       - run:
           name: Run Tests
-          command: ./Shelter/gradlew lint test
+          command: ./gradlew lint test
       - store_test_results:
           path: app/build/test-results
       - store_artifacts:  
